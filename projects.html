@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Projets - OthiSmith</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <h1 class="logo">OthiSmith</h1>
+      
+      <div class="nav-center-text">
+        <p>Portfolio de OthiSmith — Data Scientist </p>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="full-background">
+    <section class="projects">
+      <h2>Quelques projets réalisés du plus récent au plus ancien</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+        <button class="filter-btn" data-filter="visualisation">Visualisation</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+      <div class="project-list">
+        <div class="card" data-category="web">
+          <img src="assets/ano.png" alt="Projet 1">
+          <h3>Projet 1 : Création d’une Bibliothèque d’Anonymisation de données (fichiers txt, mots, phrases, paragraphes) - 2024</h3>
+          <p class="tech-stack">Python • Pandas </p>
+          <a href="https://github.com/OthiSmith/Biblio_Anonymous" class="btn" target="_blank">Voir sur GitHub</a>
+        </div>
+        <div class="card" data-category="visualisation">
+          <img src="assets/meteo.jpg" alt="Projet 2">
+          <h3>Projet 2 : Collecte données sur les critiques des films d'un site de streaming et analyse des sentiments- 2024</h3>
+          <p class="tech-stack">Python • Pandas • Webscraping</p>
+          <a href="https://github.com/OthiSmith/Webscraping_critiques_de_films_et_analyse_de_sentiments" class="btn" target="_blank">Voir sur GitHub</a>
+        </div>
+        <div class="card" data-category="machine-learning">
+          <img src="assets/churn.png" alt="Projet 3">
+          <h3>Projet 3 : Prédiction du churn d'un client d'une agence de télécommunication - 2023</h3>
+          <p class="tech-stack">Python • Pandas • Machine learning • Scikit-learn</p>
+          <a href="https://github.com/OthiSmith/Modele_de_Prediction_du_Churn_Client" class="btn" target="_blank">Voir sur GitHub</a>
+        </div>
+        <div class="card" data-category="web">
+          <img src="assets/liste_absence.png" alt="Projet 4">
+          <h3>Projet 4 : Application de gestion des absences des étudiants de l'ENSEA - 2023</h3>
+          <p class="tech-stack">Python • Pandas • SQL • Django </p>
+          <a href="https://github.com/OthiSmith/Application_Gestion_Absences" class="btn" target="_blank">Voir sur GitHub</a>
+        </div>
+        <div class="card" data-category="visualisation">
+          <img src="assets/tab.jpg" alt="Projet 5">
+          <h3>Projet 5 : Tableau de bord interactif pour états financiers - 2023</h3>
+          <p class="tech-stack">Excel • VBA </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="marquee">
+    <span>Merci de visiter mon portfolio - N'hésitez pas à me contacter pour toute collaboration ou opportunité !</span>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-filter');
+
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+
+          if (category === 'all' || cardCategory === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>À propos - OthiSmith</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <h1 class="logo">OthiSmith</h1>
+      
+      <div class="nav-center-text">
+        <p>Portfolio de OthiSmith — Data Scientist </p>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- bannière haute -->
+  <div class="page-banner">
+    <p>À propos de moi — Mon parcours et mes expertises</p>
+  </div>
+
+  <div class="page-background">
+    <div class="page-wrapper">
+
+      <!-- Bloc image + texte côte à côte -->
+      <div class="about-flex">
+        <img src="assets/smith.jpeg" alt="Photo de profil" class="profile-photo">
+        <div class="about-text">
+          <h2>À propos</h2>
+          <p>
+            Je suis diplômé de l'École Nationale de Statistique et d’Économie Appliquée (ENSEA) en 2024,
+            spécialisé en Data Science.  
+            Je suis passionné par l’analyse de données, l’intelligence artificielle et la résolution de problèmes concrets par les statistiques.  
+            J’ai travaillé sur plusieurs projets, tant individuels qu’en équipe, dans divers domaines tels que l’environnement, le marketing et la finance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Autres sections -->
+      <h3>Parcours</h3>
+      <ul class="timeline">
+        <li><strong>2025</strong> – Data Scientist à Orange CI (analyse des données commerciales)</li>
+        <li><strong>2024</strong> – Diplômé ISE de l'ENSEA spécialité Data Science</li>
+        <li><strong>2021</strong> – Classes préparatoires à l'INPHB</li>
+      </ul>
+
+      <h3>Compétences techniques</h3>
+      <ul class="skills">
+        <li>Python, R, Stata, SAS</li>
+        <li>Machine Learning (scikit-learn, XGBoost)</li>
+        <li>SQL, Git, Power BI</li>
+        <li>Analyse de données, modélisation statistique</li>
+      </ul>
+
+      <h3>Qualités humaines</h3>
+      <ul class="skills">
+        <li>Rigueur</li>
+        <li>Pensée analytique</li>
+        <li>Travail en équipe</li>
+        <li>Capacité à vulgariser</li>
+      </ul>
+
+      <a href="assets/CV_Othniel_ARRA.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <span>Merci de visiter mon portfolio - N'hésitez pas à me contacter pour toute collaboration ou opportunité !</span>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

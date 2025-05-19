@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <title>Contact - OthiSmith</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="nav-container">
+      <h1 class="logo">OthiSmith</h1>
+      
+      <div class="nav-center-text">
+        <p>Portfolio de Othniel — Data Scientist </p>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="page-background">
+    <div class="page-wrapper contact-section">
+      <h2>Me contacter</h2>
+      <p>Vous pouvez m’écrire directement à : <a href="mailto:smith@gmail.com">yannothnielarra2907@gmail.com</a></p>
+  
+      <h3 style="margin-top: 40px;">Me retrouver en ligne</h3>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/othniel-arra-552b61217/" target="_blank" class="social-btn linkedin">LinkedIn</a>
+        <a href="https://github.com/OthiSmith" target="_blank" class="social-btn github">GitHub</a>
+      </div>
+
+      <footer>
+        &copy; <span id="year"></span> - OthiSmith
+      </footer>
+      <p style="margin-bottom: 20px;">
+        N'hésitez pas à me laisser un message via ce formulaire.  
+        Que ce soit pour un échange, une collaboration ou une opportunité, je serai ravi de vous répondre !
+      </p>
+      <form action="https://formspree.io/f/xpwdnpjq" method="POST">
+        <input type="text" name="name" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message..." required></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <span>Merci de visiter mon portfolio - N'hésitez pas à me contacter pour toute collaboration ou opportunité !</span>
+  </div>
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+
+  
